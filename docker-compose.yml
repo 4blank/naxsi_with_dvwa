@@ -1,0 +1,12 @@
+version: '2'
+services:
+    waf:
+        build: naxsi
+        ports:
+          - "80:80"
+        links:
+          - "app"
+    app:
+        image: vulnerables/web-dvwa
+
+
